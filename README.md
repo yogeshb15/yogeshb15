@@ -1,6 +1,6 @@
 # Yogesh Bhardwaj - Portfolio Website Source Code
 
-This repository contains the source code for my personal portfolio website, hosted live at [https://yogeshb15.github.io](https://yogeshb15.github.io).
+This repository contains the source code for my personal portfolio website, hosted live at https://yogeshb15.github.io/portfolio/.
 
 ## About Me
 
