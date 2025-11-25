@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yogesh Bhardwaj - Research Cosmologist & AI Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background-color: #0a0a1a; /* Dark Space Background */
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, #505050, transparent),
+                radial-gradient(2px 2px at 40px 70px, #505050, transparent),
+                radial-gradient(1px 1px at 90px 40px, #505050, transparent),
+                radial-gradient(1px 1px at 130px 80px, #505050, transparent),
+                radial-gradient(2px 2px at 160px 30px, #505050, transparent);
+            background-size: 200px 100px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0c1445 0%, #1a237e 100%); /* Space Blue Gradient */
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #3498db;
+        }
+        
+        .profile-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #2c3e50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: #3498db;
+            border: 4px solid #3498db;
+            overflow: hidden;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+            color: #ffffff;
+        }
+        
+        .tagline {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            color: #bbdefb;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .contact-item a {
+            color: #bbdefb;
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+            color: #3498db;
+        }
+        
+        section {
+            background: rgba(19, 23, 42, 0.8); /* Slightly lighter space background */
+            margin: 20px 0;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            border: 1px solid #3498db;
+        }
+        
+        h2 {
+            color: #3498db; /* Space Blue */
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            font-size: 1.8em;
+        }
+        
+        .highlight-box {
+            background: rgba(30, 30, 60, 0.6); /* Darker highlight box */
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+            border-radius: 0 5px 5px 0;
+            border: 1px solid #2c3e50;
+        }
+        
+        .publication {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #2c3e50;
+        }
+        
+        .publication:last-child {
+            border-bottom: none;
+        }
+        
+        .publication h3 {
+            color: #64b5f6; /* Lighter blue for titles */
+            margin-bottom: 8px;
+        }
+        
+        .publication .date {
+            font-style: italic;
+            color: #90a4ae;
+            margin-bottom: 8px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .skill-category {
+            background: rgba(41, 48, 75, 0.6); /* Dark skill category */
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #3498db;
+        }
+        
+        .skill-category h4 {
+            color: #3498db;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .skill-category ul {
+            list-style-type: none;
+        }
+        
+        .skill-category li {
+            margin-bottom: 5px;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .skill-category li::before {
+            content: "✦"; /* Star bullet */
+            position: absolute;
+            left: 0;
+            color: #3498db;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            color: #90a4ae;
+            border-top: 1px solid #2c3e50;
+        }
+        
+        nav {
+            background: rgba(19, 23, 42, 0.95);
+            padding: 15px 0;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #3498db;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #bbdefb;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        nav a:hover {
+            background-color: #3498db;
+            color: #0a0a1a;
+            border-color: #3498db;
+        }
+        
+        .experience-item {
+            margin-bottom: 25px;
+        }
+        
+        .experience-item h3 {
+            color: #81c784; /* Green for job titles */
+        }
+        
+        .experience-item .company {
+            font-weight: bold;
+            color: #ffffff;
+        }
+        
+        .experience-item .contract {
+            font-style: italic;
+            color: #90a4ae;
+        }
+
+        /* Add stars animation */
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle var(--duration, 4s) infinite ease-in-out;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.2; }
+            50% { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            section {
+                padding: 25px 20px;
+            }
+            
+            nav ul {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile-header">
+                <div class="profile-image">
+                    <img src="picture.jpg" alt="Yogesh Bhardwaj">
+                </div>
+                <div>
+                    <h1>Yogesh Bhardwaj</h1>
+                    <p class="tagline">Research Cosmologist · LLM Engineer · AI-Trainer</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    📧 <a href="mailto:yogeshb00015@gmail.com">yogeshb00015@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    📞 +91-9467494380
+                </div>
+                <div class="contact-item">
+                    🔗 <a href="https://linkedin.com/in/yogesh-bhardwaj-23069120a" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    💻 <a href="https://github.com/yogeshb15" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm Yogesh Bhardwaj, a dedicated Research Fellow at Delhi Technological University, currently pursuing my Ph.D. in Applied Mathematics. My journey is a fascinating blend of theoretical physics and practical AI development.</p>
+            
+            <p>What drives me? The pursuit of understanding the cosmos - from the largest structures in the universe to the smallest mathematical details that govern them. I believe mathematics is the language of the universe, and through it, we can uncover profound truths about our reality.</p>
+            
+            <p>Beyond academia, I work as an LLM Senior Engineer, where I bridge the gap between theoretical research and practical AI applications. I'm passionate about developing AI models that can understand and solve complex mathematical problems, essentially creating bridges between human understanding and machine intelligence.</p>
+            
+            <div class="highlight-box">
+                <h3>My Philosophy</h3>
+                <p>"Somewhere, something incredible is waiting to be known." - Carl Sagan. This quote captures my approach to research. I'm constantly exploring the interplay between mathematics and cosmology, applying advanced computational tools like Python, machine learning, SQL, and Mathematica to connect theoretical models with real-world applications.</p>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research Focus</h2>
+            
+            <div class="highlight-box">
+                <h3>Matter Creation Cosmology</h3>
+                <p>I'm deeply involved in exploring how the universe expands through gravitationally induced matter creation. This research investigates non-equilibrium thermodynamical processes within modified gravity theories, particularly f(Q) gravity. My work aims to understand how continuous matter creation might explain cosmic acceleration without requiring dark energy.</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Modified Gravity Theories</h3>
+                <p>My research in f(Q) gravity formalism examines alternative theories of gravity to explain cosmic acceleration and dark energy phenomena. I work with generalized Chaplygin gas models and perform statistical analysis using observational datasets to test the viability of these theoretical frameworks.</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>AI in Scientific Research</h3>
+                <p>I combine my research background with AI development, creating mathematical AI models that can assist in complex scientific calculations and theoretical modeling. This interdisciplinary approach helps bridge traditional research with modern computational methods.</p>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="experience-item">
+                <div class="company">Innodata Pvt. Ltd., Noida, India</div>
+                <div class="contract">Contract Work</div>
+                <h3>Senior Associate</h3>
+                <p>As a Senior Associate at Innodata India Pvt. Ltd., I contribute to core team operations, ensuring efficient task completion within deadlines, and collaborating with cross-functional teams to achieve project goals. My role involves data management and analysis, supporting process improvements, and handling tasks related to client-specific projects and deliverables.</p>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">Delhi Technological University, Delhi, India</div>
+                <div class="contract">Ongoing Research Position</div>
+                <h3>Research Fellow</h3>
+                <p>As a Research Fellow, I focus on Applied Mathematics and Cosmology, exploring the universe's large-scale structure, origins, and dynamics. I have developed databases to track research activities, implemented mathematical models to solve complex scientific problems, and applied computational tools like Python and Mathematica for data analysis. My work has contributed to impactful findings published in peer-reviewed journals.</p>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">Outlier, San Francisco, CA, USA</div>
+                <div class="contract">Contract Work</div>
+                <h3>AI-Training</h3>
+                <p>I enhance large language models by evaluating and improving the quality of AI-generated code. I develop functional and optimized solutions across languages such as Python, Java, C++, and MATLAB while creating clear, human-readable explanations and robust test cases. My role involves optimizing code efficiency, solving complex coding problems, and ensuring AI systems can abstract and articulate solutions effectively. I leverage my complete fluency in English to describe code and abstract concepts clearly.</p>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">Turing, California, US</div>
+                <div class="contract">Contract Work</div>
+                <h3>LLM Senior Engineer</h3>
+                <p>I develop advanced mathematical AI models, combining research in applied mathematics with large language models to solve complex mathematical problems and explore innovative solutions in AI-driven systems.</p>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">I.A.S. Maths Academy, Patna, India</div>
+                <div class="contract">Contract Work</div>
+                <h3>Mathematics Specialist</h3>
+                <p>Designed, administered, and evaluated assessments to measure student understanding of mathematical concepts.</p>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">Course Hero, California, US</div>
+                <div class="contract">Contract Work</div>
+                <h3>Subject Matter Expert, Reviewer</h3>
+                <p>Mentored junior staff members on best practices related to subject knowledge and implementation strategies.</p>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">Chegg, Delhi, India</div>
+                <div class="contract">Contract Work</div>
+                <h3>Subject Matter Expert</h3>
+                <p>Providing subject matter expertise and guidance to cross-functional teams in developing advanced mathematics test series solutions.</p>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            
+            <div class="publication">
+                <h3>Late cosmic acceleration by matter creation cosmology in modified gravity</h3>
+                <div class="date">Annals of Physics, June 2025</div>
+                <p>Explored the expansion of the Universe powered by gravitationally induced 'adiabatic' matter creation in f(Q) gravity, analyzing the role of matter creation in late-time evolution and comparing models with ΛCDM using observational datasets including Pantheon+, Cosmic Chronometer (CC), and Baryonic Acoustic Oscillations (BAO).</p>
+            </div>
+            
+            <div class="publication">
+                <h3>Constraining Variable Generalized Chaplygin Gas model in Matter Creation Cosmology</h3>
+                <div class="date">Communication in Theoretical Physics, August 2024</div>
+                <p>Investigated the variable generalized Chaplygin gas model in matter creation cosmology, using Markov Chain Monte Carlo methods to constrain parameters with observational data including supernovae (Pantheon), cosmic chronometer (CC), BAO, DESI BAO, Quasars, and Gamma-Ray Bursts (GRB).</p>
+            </div>
+            
+            <div class="publication">
+                <h3>Matter creation cosmology with generalized Chaplygin gas</h3>
+                <div class="date">Astrophysics and Space Science, January 2024</div>
+                <p>Examined the dynamics of flat FLRW models powered by adiabatic matter creation with generalized Chaplygin gas equation of state, constraining the model using observational datasets including Type Ia supernovae Pantheon, H(z) and BAO.</p>
+            </div>
+            
+            <div class="publication">
+                <h3>An Extended Multilevel Transportation Problem with Multiple Inputs and Outputs</h3>
+                <div class="date">DSPACE JSPUI, Delhi Technological University, May 2021</div>
+                <p>Extended the classic multilevel transportation problem by introducing multiple incompatible inputs and outputs for each shipment connection, developing linear programming solutions for efficient transportation strategies.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Expertise</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Programming Languages</h4>
+                    <ul>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>Java</li>
+                        <li>C++</li>
+                        <li>Matlab</li>
+                        <li>R</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Python Libraries</h4>
+                    <ul>
+                        <li>NumPy</li>
+                        <li>Pandas</li>
+                        <li>Matplotlib</li>
+                        <li>Scikit-learn</li>
+                        <li>TensorFlow</li>
+                        <li>PyTorch</li>
+                        <li>SciPy</li>
+                        <li>Seaborn</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Machine Learning</h4>
+                    <ul>
+                        <li>Supervised Learning</li>
+                        <li>Unsupervised Learning</li>
+                        <li>Deep Learning</li>
+                        <li>Neural Networks</li>
+                        <li>Reinforcement Learning</li>
+                        <li>Feature Engineering</li>
+                        <li>Model Evaluation</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Matlab Libraries</h4>
+                    <ul>
+                        <li>Statistics and Machine Learning Toolbox</li>
+                        <li>Signal Processing Toolbox</li>
+                        <li>Image Processing Toolbox</li>
+                        <li>Optimization Toolbox</li>
+                        <li>Econometrics Toolbox</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Research Areas</h4>
+                    <ul>
+                        <li>Cosmology</li>
+                        <li>Applied Mathematics</li>
+                        <li>General Relativity</li>
+                        <li>Modified Gravity Theories</li>
+                        <li>Mathematical Modeling</li>
+                        <li>Data-Driven Astronomy</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Specializations</h4>
+                    <ul>
+                        <li>Matter Creation Cosmology</li>
+                        <li>f(Q) Gravity</li>
+                        <li>Chaplygin Gas Models</li>
+                        <li>Statistical Analysis</li>
+                        <li>AI Model Development</li>
+                        <li>Large Language Models</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Tools & Technologies</h4>
+                    <ul>
+                        <li>Mathematica</li>
+                        <li>LaTeX</li>
+                        <li>SPSS</li>
+                        <li>Git</li>
+                        <li>Docker</li>
+                        <li>SQL Databases</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Cosmological Datasets</h4>
+                    <ul>
+                        <li>Pantheon+</li>
+                        <li>BAO (Baryonic Acoustic Oscillations)</li>
+                        <li>DESI BAO</li>
+                        <li>Quasars</li>
+                        <li>GRB (Gamma-Ray Bursts)</li>
+                        <li>CC (Cosmic Chronometer)</li>
+                        <li>R21</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            
+            <div class="experience-item">
+                <div class="company">Delhi Technological University, Delhi, India</div>
+                <div class="contract">Ongoing Research Program</div>
+                <h3>Ph.D. in Applied Mathematics</h3>
+                <p>Research focus on cosmology and mathematical modeling of the universe's large-scale structure and dynamics.</p>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">Delhi Technological University, Delhi, India</div>
+                <div class="contract">Completed</div>
+                <h3>M.Sc. in Applied Mathematics</h3>
+                <p>Rigorous program focusing on advanced mathematical theories and their real-world applications, with emphasis on problem-solving and mathematical modeling.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Yogesh Bhardwaj. All Rights Reserved.</p>
+            <p>"Science is a beautiful gift to humanity; we should not distort it. Dream, dream, dream; dreams transform into thoughts, and thoughts result in action." - A.P.J. Abdul Kalam</p>
+        </div>
+    </footer>
+
+    <!-- Add stars to the background -->
+    <script>
+        // Function to create stars
+        function createStars() {
+            const body = document.body;
+            const starCount = 100; // Adjust number of stars
+
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // Random position
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                
+                // Random size
+                const size = Math.random() * 2 + 1;
+                
+                // Random animation duration
+                const duration = Math.random() * 5 + 2;
+                
+                star.style.left = `${x}vw`;
+                star.style.top = `${y}vh`;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.setProperty('--duration', `${duration}s`);
+                
+                body.appendChild(star);
+            }
+        }
+
+        // Create stars when the page loads
+        window.addEventListener('load', createStars);
+    </script>
+</body>
+</html>
